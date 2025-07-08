@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinema Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Raleway', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('background.jpeg') no-repeat center top fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeInUp 1.2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      font-size: 22px;
+      max-width: 90vw;
+      margin-bottom: 60px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-position: center -160px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cinema Pro</h1>
+    <div style="flex-grow: 1;"></div>
+    <p>
+      Our webpage is still in preproduction.<br />
+      No panic, all our projects are intact and ongoing!<br />
+      For now, reach out to us at:<br />
+      <a href="mailto:lyubomir@cinemapro.bg">lyubomir@cinemapro.bg</a>
+    </p>
+  </div>
+</body>
+</html>
